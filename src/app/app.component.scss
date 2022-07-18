@@ -1,0 +1,57 @@
+::ng-deep {
+    .ant-switch {
+        border: 2px solid #F7811F;
+        background-color: rgba(239, 239, 239, 0.5);
+        min-width: 28px;
+        height: 17px;
+    }
+    .ant-checkbox-inner {
+        border: 2px solid #f7811f;
+    }
+    .ant-checkbox-checked .ant-checkbox-inner {
+        background-color: #f7811f;
+        border-color: #f7811f;
+    }
+    .ant-switch-checked {
+        background-color: #2BD95C;
+    }
+    .ant-switch-handle::before {
+        border: 2px solid #F7811F;
+        background-color: #FF9D4B;
+    }
+    .ant-switch-handle {
+        top: 1px;
+        width: 12px;
+        height: 12px;
+    }
+    .ant-switch-checked .ant-switch-handle {
+        left: calc(100% - 12px - 2px);
+    }
+    .ant-radio-checked .ant-radio-inner{
+        border-color: #f7811f;
+        border-width: 2px;
+    }          
+    .ant-radio-checked .ant-radio-inner:after{
+        background-color: #f7811f;
+    }          
+    .ant-radio:hover .ant-radio-inner {
+        border-color: #f7811f ;
+        background-color: #FFEAD9;
+    }
+    .ant-checkbox:hover .ant-checkbox-inner{
+        background-color: #FFEAD9;
+    }
+    .ant-radio-inner {
+        border-width: 2px;
+        border-color: #f7811f;
+    }
+    .ant-checkbox-wrapper {
+        span {
+            span {
+                font-size: 16px;
+                font-weight: 400;
+                color: #5B5D63;
+            }
+        }
+    }
+} 

@@ -1,0 +1,14 @@
+<div class="ant-row select-options" style="margin-top: 20px;">
+    <div class="ant-col-md-6">
+        <span class="f-12 fw-400 dark-grey">Field Name</span>
+        <nz-input-group>
+            <nz-select nzMode="multiple" nzPlaceHolder="Select" [(ngModel)]="listOfSelectedValue" class="select-option">
+              <nz-option
+                *ngFor="let option of listOfOption"
+                [nzLabel]="option"
+                [nzValue]="option"              
+              ></nz-option>                       
+            </nz-select>
+        </nz-input-group>
+    </div>
+</div>
