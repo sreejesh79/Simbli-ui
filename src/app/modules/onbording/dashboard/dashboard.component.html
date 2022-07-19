@@ -1,0 +1,55 @@
+<div class="dashboard">
+    <div class="logo m10">
+        <img nz-image nzSrc="../../../../assets/images/logo.svg"/> 
+    </div>
+    <div class="container">
+        <div class="steps-content">
+            <ng-container>
+                <div *ngIf="!this.second && !this.third && !this.four">
+                    <app-personal-details></app-personal-details>
+                </div>
+                <div *ngIf="this.second">sdfs sdfsdf sdfdf</div>
+                <div *ngIf="this.third">harshala</div>
+                <div *ngIf="this.four">dubla</div>
+            </ng-container>
+            <div class="steps-action">
+                <button nz-button nzType="default" (click)="pre()" *ngIf="current > 0">
+                    <span>Previous</span>
+                </button>
+                <button nz-button nzType="default" (click)="next()" *ngIf="current < 3">
+                    <span>Next</span>
+                </button>
+                <button nz-button nzType="primary" (click)="done()" *ngIf="current ===4">
+                    <span>Done</span>
+                </button>
+            </div>
+        </div>
+
+        <nz-steps [nzCurrent]="current">
+            <nz-step [nzIcon]="use">
+                <ng-template #use>
+                    <img src="../../../../assets/images/icons/user_default.png" />
+                </ng-template>
+            </nz-step>
+
+            <nz-step [nzIcon]="account">
+                <ng-template #account>
+                    <img src="../../../../assets/images/icons/account_default.png" />
+                </ng-template>
+            </nz-step>
+
+            <nz-step [nzIcon]="company">
+                <ng-template #company>
+                    <img src="../../../../assets/images/icons/company_default.png" />
+                </ng-template>
+            </nz-step>
+
+            <nz-step [nzIcon]="office">
+                <ng-template #office>
+                    <img src="../../../../assets/images/icons/office_default.png" />
+                </ng-template>
+            </nz-step>
+        </nz-steps>
+    </div>
+
+</div>

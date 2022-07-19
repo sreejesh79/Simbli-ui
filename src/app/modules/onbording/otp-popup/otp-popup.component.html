@@ -1,10 +1,19 @@
-<div>    
+<div class="otp-wrapper">    
     <ng-container>
         <p class="fw-400 f-20 blue-text">We have sent you a 6-digit OTP to your email address. <br/>
             Enter to continue. </p>
-            <div class="ant-row" style="margin-top: 20px;">
-                <button nz-button [nzSize]="size" nzType="default" class="f-12 fw-600 orange-text">Button Label</button>
-            </div>  
+        <div class="ant-row mt-30 mb-50">
+            <ng-otp-input (onInputChange)="onMobileOtpChange($event)"  [config]="{length:6}" style="margin: auto;"></ng-otp-input> 
+        </div>
+        <div class="ant-row mt-20">
+            <div nz-col nzXs="12" nzSm="12" nzMd="12" class="d-flex resend">
+                <img src="../../../../assets/images/icons/resend.svg" />
+                <p class="f-14 fw-400 cursor-pointer orange-text pl-15">Resend OTP</p>
+            </div>
+            <div nz-col nzXs="12" nzSm="12" nzMd="12" class="button-styles text-right">
+                <button nz-button [nzSize]="size" nzType="default" class="f-12 fw-600 orange-text" (click)="goDashboard()">Proceed</button>
+            </div>            
+        </div>  
     </ng-container>
     
 </div>

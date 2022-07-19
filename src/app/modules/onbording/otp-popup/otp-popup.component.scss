@@ -1,0 +1,14 @@
+.otp-wrapper {
+    .resend {
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    ::ng-deep {
+        .otp-input {
+            width: 64px !important;
+            height: 64px !important;
+        }
+    }
+}
