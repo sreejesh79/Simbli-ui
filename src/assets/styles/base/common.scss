@@ -19,7 +19,7 @@ b {
 /*button styles*/
 .button-styles {
     .ant-btn-primary {
-        width: 108px;
+        min-width: 108px;
         // height: 40px;
         background: #F7811F;
         border-color: #F7811F;
@@ -28,7 +28,7 @@ b {
     }
     .ant-btn-primary:hover {
         background: #F7811F;
-        border-color: #96989C;
+        border-color: var(--grey);
         box-shadow: 0px 4px 10px rgba(90, 115, 130, 0.4);
     }
     .ant-btn-primary:active, .ant-btn-primary:focus, .ant-btn-primary:visited {
@@ -55,7 +55,7 @@ b {
         margin-left: 10px;
     }
     .ant-btn {
-        width: 108px;    
+        min-width: 108px;    
         border-color: #F7811F;
         border-radius: 6px;
         color: #5B5D63;
@@ -103,9 +103,18 @@ b {
         font-size: 16px;
         font-weight: 400;
         color: #5B5D63;
+        border-color: var(--grey);
+        border-radius: 4px;
+        border-top-left-radius: 4px !important;
+        border-bottom-left-radius: 4px !important;
+        background-color: var(--white4) !important;
+       
     }
-}
 
+}
+.input-field input[type=text]:focus + label  {
+    background-color: red;
+}
 
 /*other styles*/
 .other-styles {  

@@ -1,0 +1,43 @@
+<div class="office-details">
+    <div class="ant-row">
+        <div nz-col nzXs="16" nzSm="16" nzMd="16">
+            <div class="ant-row align-baseline">               
+                <img nz-image nzSrc="../../../../assets/images/icons/office.png"  width="24px" height="21px" /> 
+                <span class="f-24 fw-400 blue-text ml-10">Offices</span>
+            </div>
+            <div class="ant-row mt-20">
+                <span class="fw-400 f-14 dark-grey">We were able to retrive following office locations from the company database</span>
+                <nz-table #colSpanTable [nzData]="listOfData" nzBordered [nzShowPagination]="false">
+                    <thead>
+                      <tr class="dark-grey">
+                        <th>Office</th>
+                        <th>Address</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let data of colSpanTable.data; index as i">
+                        <!-- <td>{{ data.office }}</td>
+                        <td>{{ data.address }}</td> -->
+                        <td>
+                            <nz-input-group>
+                                <input nz-input />
+                            </nz-input-group>
+                        </td>
+                        <td>
+                            <nz-input-group>
+                                <input nz-input class="w100" />
+                            </nz-input-group>
+                        </td>
+                      </tr>
+                    </tbody>
+                </nz-table> 
+            </div>
+            <div class="W100 mt-20 text-right">
+                <div class="f-12 fw-500 cursor-pointer orange-text">++Office</div>
+            </div>
+        </div>
+        <div nz-col nzXs="8" nzSm="8" nzMd="8" class="sideImg">
+           <img nz-image nzSrc="../../../../assets/images/icons/office.svg" />
+        </div>
+    </div>
+</div>

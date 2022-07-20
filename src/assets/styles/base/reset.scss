@@ -9,4 +9,33 @@
 }
 .steps-content {
     text-align: left !important;
+    margin-top: inherit !important;
+    border: none !important;
+    border-radius: none !important;
+    background-color: inherit !important;
+    min-height: inherit !important;
+}
+.ant-steps-icon {
+    img {
+        width: 85% !important;
+    }
+}
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    border-color: var(--grey) !important;
+    background-color: var(--white4);
+}
+.ant-btn-lg {
+    height: 36px !important;
+}
+.ant-table-wrapper {
+    width: 100%;
+}
+.ant-table-thead > tr > th {
+    padding: 5px 16px !important;
+    background: var(--blue3);
+    border-bottom: 1px solid var(--white5);
+}
+.ant-table-tbody > tr > td {
+    padding: 5px 16px !important;
+    border-bottom: 1px solid var(--white5);
 }

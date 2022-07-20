@@ -12,6 +12,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { FormsModule } from '@angular/forms';
+import { AccountInfoComponent } from './account-info/account-info.component';
+import { CompanyDetailsComponent } from './company-details/company-details.component';
+import { OfficeDetailsComponent } from './office-details/office-details.component';
+import { SucessPopupComponent } from './sucess-popup/sucess-popup.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,10 @@ import { FormsModule } from '@angular/forms';
     OtpPopupComponent,
     PersonalDetailsComponent,
     DashboardComponent,
+    AccountInfoComponent,
+    CompanyDetailsComponent,
+    OfficeDetailsComponent,
+    SucessPopupComponent,
   
   ],
   imports: [

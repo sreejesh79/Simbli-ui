@@ -79,6 +79,9 @@ body {
 }
 
 /*padding*/
+.p10 {
+	padding: 10px;
+}
 .pt-30 {
     padding-top: 30px;
 }
@@ -93,6 +96,9 @@ body {
 }
 .m10 {
 	margin: 10px;
+}
+.ml-10 {
+	margin-left: 10px;
 }
 .mt-20 {
 	margin-top: 20px;
@@ -123,4 +129,7 @@ body {
 /*width*/
 .w150 {
     width: 150px;
+}
+.w100 {
+	width: 100%;
 }

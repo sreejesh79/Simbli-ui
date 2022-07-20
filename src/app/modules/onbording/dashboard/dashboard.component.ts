@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NzButtonSize } from 'ng-zorro-antd/button';
+import { NzModalService } from 'ng-zorro-antd/modal';
+import { SucessPopupComponent } from '../sucess-popup/sucess-popup.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  size: NzButtonSize = 'large';
   current = 0;
   index = 'First-content';
   first: boolean = false;
@@ -13,7 +17,7 @@ export class DashboardComponent implements OnInit {
   third: boolean = false;
   four: boolean = false;
 
-  constructor() { }
+  constructor(private modalService: NzModalService) { }
 
   ngOnInit(): void {
   }
@@ -29,7 +33,11 @@ export class DashboardComponent implements OnInit {
   }
 
   done(): void {
-    console.log('done');
+    this.modalService.create({
+      nzContent: SucessPopupComponent,
+      nzMaskClosable: false,
+      nzClosable: false
+    });
   }
 
   changeContent(): void {

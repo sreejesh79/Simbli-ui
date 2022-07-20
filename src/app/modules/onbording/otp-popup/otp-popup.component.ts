@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { NzButtonSize } from 'ng-zorro-antd/button';
+import { NzModalRef } from 'ng-zorro-antd/modal';
 
 @Component({
   selector: 'app-otp-popup',
@@ -11,7 +12,8 @@ export class OtpPopupComponent implements OnInit {
   @ViewChild('ngMobileOtpInput') ngMobileOtpInputRef: any;
   size: NzButtonSize = 'large';  
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private modal: NzModalRef) { 
+  }
 
   config = {
     allowNumbersOnly: true,
@@ -41,6 +43,7 @@ export class OtpPopupComponent implements OnInit {
   }
 
   goDashboard() {
+    this.modal.destroy();
     this.router.navigateByUrl("onbording/dashboard");
   }
 

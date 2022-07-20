@@ -1,5 +1,5 @@
-<div class="dashboard">
-    <div class="logo m10">
+<div class="dashboard bg-white">
+    <div class="logo p10">
         <img nz-image nzSrc="../../../../assets/images/logo.svg"/> 
     </div>
     <div class="container">
@@ -8,28 +8,36 @@
                 <div *ngIf="!this.second && !this.third && !this.four">
                     <app-personal-details></app-personal-details>
                 </div>
-                <div *ngIf="this.second">sdfs sdfsdf sdfdf</div>
-                <div *ngIf="this.third">harshala</div>
-                <div *ngIf="this.four">dubla</div>
+                <div *ngIf="this.second">
+                    <app-account-info></app-account-info>
+                </div>
+                <div *ngIf="this.third">
+                    <app-company-details></app-company-details>
+                </div>
+                <div *ngIf="this.four">
+                    <app-office-details></app-office-details>
+                </div>
             </ng-container>
-            <div class="steps-action">
-                <button nz-button nzType="default" (click)="pre()" *ngIf="current > 0">
+            <div class="steps-action button-styles">
+                <!-- <button nz-button nzType="default" (click)="pre()" *ngIf="current > 0">
                     <span>Previous</span>
+                </button> -->
+                <button nz-button [nzSize]="size" nzType="primary" (click)="next()" *ngIf="current < 3" class="f-12 fw-600">
+                    <span>Save and Continue</span>
                 </button>
-                <button nz-button nzType="default" (click)="next()" *ngIf="current < 3">
-                    <span>Next</span>
-                </button>
-                <button nz-button nzType="primary" (click)="done()" *ngIf="current ===4">
+                <button nz-button [nzSize]="size" nzType="primary" (click)="done()" *ngIf="current == 3" class="f-12 fw-600">
                     <span>Done</span>
                 </button>
             </div>
-        </div>
-
+        </div>        
+    </div>
+    <div class="bottom-tab">
         <nz-steps [nzCurrent]="current">
             <nz-step [nzIcon]="use">
                 <ng-template #use>
                     <img src="../../../../assets/images/icons/user_default.png" />
                 </ng-template>
+                
             </nz-step>
 
             <nz-step [nzIcon]="account">
