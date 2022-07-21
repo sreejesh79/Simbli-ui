@@ -11,11 +11,13 @@ import { NzStepsModule } from 'ng-zorro-antd/steps';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { NzSelectModule } from 'ng-zorro-antd/select';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccountInfoComponent } from './account-info/account-info.component';
 import { CompanyDetailsComponent } from './company-details/company-details.component';
 import { OfficeDetailsComponent } from './office-details/office-details.component';
 import { SucessPopupComponent } from './sucess-popup/sucess-popup.component';
+import { NoDataPopupComponent } from './no-data-popup/no-data-popup.component';
+import { NzFormModule } from 'ng-zorro-antd/form';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { SucessPopupComponent } from './sucess-popup/sucess-popup.component';
     CompanyDetailsComponent,
     OfficeDetailsComponent,
     SucessPopupComponent,
+    NoDataPopupComponent,
   
   ],
   imports: [
@@ -35,8 +38,9 @@ import { SucessPopupComponent } from './sucess-popup/sucess-popup.component';
     OnbordingRoutingModule,
     NgZorroAntdModule,
     NgOtpInputModule,
- 
-    FormsModule  
+    NzFormModule,
+    FormsModule,
+    ReactiveFormsModule, 
   ]
 })
 export class OnbordingModule { }

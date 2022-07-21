@@ -10,6 +10,7 @@ p {
     font: 'Rubik', sans-serif !important;
     color: inherit;
     margin-bottom: 0 !important;
+    line-height: 24px;
 }
 b {
     font: 800 44px/1.2 'Rubik', sans-serif;
@@ -243,6 +244,9 @@ nz-select {
 }
 .align-baseline {
     align-items: baseline;
+}
+.align-center {
+    align-items: center;
 }
 .cursor-pointer {
     cursor: pointer;

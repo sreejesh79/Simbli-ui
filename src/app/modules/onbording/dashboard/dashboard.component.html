@@ -6,58 +6,58 @@
         <div class="steps-content">
             <ng-container>
                 <div *ngIf="!this.second && !this.third && !this.four">
-                    <app-personal-details></app-personal-details>
+                    <app-personal-details (submitdata)="next()"></app-personal-details>
                 </div>
                 <div *ngIf="this.second">
-                    <app-account-info></app-account-info>
+                    <app-account-info (submitdata)="next()"></app-account-info>
                 </div>
                 <div *ngIf="this.third">
-                    <app-company-details></app-company-details>
+                    <app-company-details (submitdata)="next()"></app-company-details>
                 </div>
                 <div *ngIf="this.four">
-                    <app-office-details></app-office-details>
+                    <app-office-details (submitdata)="next()"></app-office-details>
                 </div>
             </ng-container>
-            <div class="steps-action button-styles">
-                <!-- <button nz-button nzType="default" (click)="pre()" *ngIf="current > 0">
-                    <span>Previous</span>
-                </button> -->
+            <!-- <div class="steps-action button-styles">
+                
                 <button nz-button [nzSize]="size" nzType="primary" (click)="next()" *ngIf="current < 3" class="f-12 fw-600">
                     <span>Save and Continue</span>
                 </button>
                 <button nz-button [nzSize]="size" nzType="primary" (click)="done()" *ngIf="current == 3" class="f-12 fw-600">
                     <span>Done</span>
                 </button>
-            </div>
+            </div> -->
         </div>        
     </div>
     <div class="bottom-tab">
-        <nz-steps [nzCurrent]="current">
-            <nz-step [nzIcon]="use">
-                <ng-template #use>
-                    <img src="../../../../assets/images/icons/user_default.png" />
-                </ng-template>
-                
-            </nz-step>
-
-            <nz-step [nzIcon]="account">
-                <ng-template #account>
-                    <img src="../../../../assets/images/icons/account_default.png" />
-                </ng-template>
-            </nz-step>
-
-            <nz-step [nzIcon]="company">
-                <ng-template #company>
-                    <img src="../../../../assets/images/icons/company_default.png" />
-                </ng-template>
-            </nz-step>
-
-            <nz-step [nzIcon]="office">
-                <ng-template #office>
-                    <img src="../../../../assets/images/icons/office_default.png" />
-                </ng-template>
-            </nz-step>
-        </nz-steps>
+        <div class="bottom-inner">
+            <nz-steps [nzCurrent]="current">
+                <nz-step [nzIcon]="use">
+                    <ng-template #use>
+                        <img src="../../../../assets/images/icons/user_default.png" />
+                    </ng-template>
+                    
+                </nz-step>
+    
+                <nz-step [nzIcon]="account">
+                    <ng-template #account>
+                        <img src="../../../../assets/images/icons/account_default.png" />
+                    </ng-template>
+                </nz-step>
+    
+                <nz-step [nzIcon]="company">
+                    <ng-template #company>
+                        <img src="../../../../assets/images/icons/company_default.png" />
+                    </ng-template>
+                </nz-step>
+    
+                <nz-step [nzIcon]="office">
+                    <ng-template #office>
+                        <img src="../../../../assets/images/icons/office_default.png" />
+                    </ng-template>
+                </nz-step>
+            </nz-steps>
+        </div>
     </div>
 
 </div>

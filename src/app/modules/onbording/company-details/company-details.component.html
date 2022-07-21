@@ -5,19 +5,22 @@
                 <img nz-image nzSrc="../../../../assets/images/icons/company.png"  width="24px" height="21px" /> 
                 <span class="f-24 fw-400 blue-text ml-10">Company Details</span>
             </div>
-            <div class="ant-row mt-20 align-end">
-                <div class="input-fields" nz-col nzXs="10" nzSm="10" nzMd="10">
-                    <nz-input-group>
-                        <span class="f-12 fw-400 dark-grey">Company PAN</span>
-                        <input nz-input placeholder="Company PAN" />                      
-                    </nz-input-group>
+            <form nz-form [formGroup]="validateForm" (ngSubmit)="onSubmit()">
+                <div class="ant-row mt-20 pan">                
+                    <div class="input-fields" nz-col nzXs="12" nzSm="12" nzMd="12">
+                        <nz-form-item>
+                            <nz-form-label nzRequired nzFor="pan" class="f-12 fw-400 dark-grey">Company PAN</nz-form-label>
+                            <nz-form-control nzErrorTip="Enter Company PAN">
+                                <input nz-input formControlName="pan" id="pan" placeholder="Company PAN" />
+                            </nz-form-control>
+                        </nz-form-item>  
+                    </div>
+                    <div class="button-styles mt-30" nz-col nzXs="12" nzSm="12" nzMd="12">
+                        <button nz-button [nzSize]="size" type="submit" nzType="default" class="f-12 fw-600">Fetch Details
+                        </button>
+                    </div>                
                 </div>
-                <div class="button-styles" nz-col nzXs="10" nzSm="10" nzMd="10">
-                    <button nz-button [nzSize]="size" nzType="default" class="f-12 fw-600" (click)="fetch()">
-                        <span>Fetch Details</span>
-                    </button>
-                </div>
-            </div>
+            </form>            
             <div *ngIf="isFetch">
                 <div class="ant-row mt-20">
                     <div class="input-fields" nz-col nzXs="10" nzSm="10" nzMd="10">
@@ -62,6 +65,11 @@
                 <div class="W100 mt-20 text-right">
                     <div class="f-12 fw-500 cursor-pointer orange-text">++GST</div>
                 </div>
+            </div>
+            <div class="steps-action button-styles mt-50">                
+                <button nz-button [nzSize]="size" nzType="primary" (click)="continue()" class="f-12 fw-600">
+                    <span>Save and Continue</span>
+                </button>
             </div>            
         </div>
         <div nz-col nzXs="8" nzSm="8" nzMd="8" class="sideImg">

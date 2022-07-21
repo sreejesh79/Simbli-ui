@@ -16,7 +16,9 @@ export class DashboardComponent implements OnInit {
   second: boolean = false;
   third: boolean = false;
   four: boolean = false;
-
+  selectedTab: number = 0;
+  id: any;
+  
   constructor(private modalService: NzModalService) { }
 
   ngOnInit(): void {
@@ -32,13 +34,13 @@ export class DashboardComponent implements OnInit {
     this.changeContent();
   }
 
-  done(): void {
-    this.modalService.create({
-      nzContent: SucessPopupComponent,
-      nzMaskClosable: false,
-      nzClosable: false
-    });
-  }
+  // done(): void {
+  //   this.modalService.create({
+  //     nzContent: SucessPopupComponent,
+  //     nzMaskClosable: false,
+  //     nzClosable: false
+  //   });
+  // }
 
   changeContent(): void {
     switch (this.current) {

@@ -17,23 +17,25 @@
                     <span>Simplify your business operations with Simblify. </span><br/>
                     <span>The complete ERP solution for MSME’s</span>
                 </div>
-                <div class="ant-row align-end mt-50">
-                    <div class="input-fields" nz-col nzMd="9">
-                        <div>
-                            <nz-input-group>
-                                <span class="f-12 fw-400 dark-grey">Email Address</span>
-                                <input nz-input placeholder="Email Address" />
-                            </nz-input-group>
-                        </div>    
-                    </div>
-                    <div nz-col nzMd="1">
-                    </div>
-                    <div class="button-styles" nz-col nzMd="4">
-                        <div>
-                            <button nz-button [nzSize]="size" nzType="primary" class="f-12 fw-600" (click)="showModal()">Register</button>
+                <form nz-form [formGroup]="validateForm" (ngSubmit)="onSubmit()">
+                    <div class="ant-row align-end mt-50">
+                        <div class="input-fields" nz-col nzMd="9">                                                           
+                            <nz-form-item>
+                                <nz-form-label nzRequired nzFor="email" class="f-12 fw-400 dark-grey">Email Address</nz-form-label>
+                                <nz-form-control nzErrorTip="Enter valid Email">
+                                    <input nz-input formControlName="email" id="email" placeholder="Email Address" />
+                                </nz-form-control>
+                            </nz-form-item>                                
                         </div>
+                        <div nz-col nzMd="1">
+                        </div>
+                        <nz-form-item class="button-styles" nz-col nzMd="4">
+                            <nz-form-control>
+                                <button nz-button [nzSize]="size" nzType="primary" class="f-12 fw-600" type="submit">Register</button>
+                            </nz-form-control>
+                        </nz-form-item>
                     </div>
-                </div>
+                </form>
                 <div class="f-14 fw-400 dark-grey mt-30">
                     Already have an account ? <span class="f-16 fw-500 cursor-pointer orange-text">Login</span>
                 </div>

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ButtonStylesComponent } from './button-styles.component';
+import { NoDataPopupComponent } from './no-data-popup.component';
 
-describe('ButtonStylesComponent', () => {
-  let component: ButtonStylesComponent;
-  let fixture: ComponentFixture<ButtonStylesComponent>;
+describe('NoDataPopupComponent', () => {
+  let component: NoDataPopupComponent;
+  let fixture: ComponentFixture<NoDataPopupComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ButtonStylesComponent ]
+      declarations: [ NoDataPopupComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ButtonStylesComponent);
+    fixture = TestBed.createComponent(NoDataPopupComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

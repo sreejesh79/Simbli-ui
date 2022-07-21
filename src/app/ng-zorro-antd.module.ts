@@ -149,7 +149,8 @@ import { CommonModule } from '@angular/common';
     NzResizableModule,
     NzPipesModule,
     NzRadioModule,
-    NzTableModule 
+    NzTableModule ,
+    NzFormModule 
   ]
 })
 export class NgZorroAntdModule { }

@@ -10,21 +10,12 @@ import en from '@angular/common/locales/en';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { InputsComponent } from './inputs/inputs.component';
 import { NgZorroAntdModule } from './ng-zorro-antd.module';
-import { ButtonStylesComponent } from './button-styles/button-styles.component';
-import { OtherStylesComponent } from './other-styles/other-styles.component';
-import { SelectDropdownComponent } from './select-dropdown/select-dropdown.component';
-
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
-    AppComponent,
-    InputsComponent,
-    ButtonStylesComponent,
-    OtherStylesComponent,
-    SelectDropdownComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

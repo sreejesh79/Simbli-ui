@@ -39,3 +39,13 @@
     padding: 5px 16px !important;
     border-bottom: 1px solid var(--white5);
 }
+.ant-form-item-label > label {
+    font-size: 12px !important;
+    color: var(--dark-grey);
+}
+.ant-form-item {
+    display: block;
+}
+.ant-select-show-search.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    height: 35px !important;
+}

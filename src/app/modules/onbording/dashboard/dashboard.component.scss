@@ -32,7 +32,10 @@
     .bottom-tab {
         background-color: var(--white);
         padding: 12px;
-        width: 85%;
         margin: auto;
+        .bottom-inner {
+            width: 85%;
+            margin: auto;
+        }
     }
 }
