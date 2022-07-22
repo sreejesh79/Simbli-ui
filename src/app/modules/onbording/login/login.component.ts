@@ -13,8 +13,10 @@ export class LoginComponent implements OnInit {
   size: NzButtonSize = 'large';
   validateForm!: FormGroup;
   emailValidation = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+  isMobile: boolean = false;
 
-  constructor(private modalService: NzModalService, private fb: FormBuilder) { }
+  constructor(private modalService: NzModalService, private fb: FormBuilder) {    
+   }
 
   ngOnInit(): void {
     this.validateForm = this.fb.group({

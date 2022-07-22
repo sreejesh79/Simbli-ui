@@ -8,3 +8,20 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .mobileStyle {
+        .ant-col-xs-14 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    .mstyle {
+        display: block !important;
+        .ant-col-xs-10 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        margin-top: 0 !important;
+    }
+}

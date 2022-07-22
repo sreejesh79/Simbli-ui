@@ -1,5 +1,6 @@
 .login-page {
     height: 100vh;
+    overflow-y: auto;
     .login-wrapper {
         height: 100%;
         .profile {
@@ -42,8 +43,54 @@
         }        
     }
 }
+.isDesktop {
+    display: block;
+}
+.isMobile {
+    display: none;
+}
 ::ng-deep {
     .ant-modal-footer {
         display: none !important;
+    }
+}
+@media screen and (min-width: 801px) and (max-width: 991px) {
+    .profile-description {
+        width: 342px !important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .isDesktop {
+        display: none;
+    }
+    .isMobile {
+        display: block;
+        .profile {
+            height: 520px;
+            .profile-description {
+                right: 0 !important;
+                width: 378px !important;
+                .f-16 {
+                    font-size: 14px !important;
+                }
+                .f-18 {
+                    font-size: 16px !important;
+                }
+                .mt-30 {
+                    margin-top: 7px !important;
+                }
+            }
+        }
+    }
+    .mt-140 {
+        margin-top: 70px;
+    }
+    .pl-75 {
+        padding-left: 0;
+        padding: 20px;
+    }
+    .d-block {
+        display: block !important;
     }
 }

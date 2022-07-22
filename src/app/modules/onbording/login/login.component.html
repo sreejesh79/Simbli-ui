@@ -1,7 +1,6 @@
-<div class="login-page">
+<div class="login-page isDesktop">
     <div nz-row class="login-wrapper">
         <div nz-col nzXs="9" nzSm="9" nzMd="9" class="profile">
-            <!-- <img src="../../../../assets/images/icons/profile_photo.svg" /> -->
             <div class="profile-description">
                 <p class="fw-400 f-16 blue-text">Simblify has streamlined our operation to such an extend, that we have stopped looking into it and are focusing entirely on our core business.</p>
                 <p class="fw-700 f-18 blue-text mt-30">Vinay Parab</p>
@@ -47,5 +46,56 @@
                 </div>
            </div>
         </div>        
+    </div>
+</div>
+
+<div class="login-page isMobile">
+    <div nz-row class="login-wrapper">
+        <div nz-col nzXs="24" nzSm="24" nzMd="24" class="details">
+            <div class="logo">
+                <img src="../../../../assets/images/logo.svg" />
+            </div>
+            <div class="pl-75">
+                <div class="details-text blue-text fw-400 f-24 mt-140">
+                    <span>Simplify your business operations with Simblify. </span><br/>
+                    <span>The complete ERP solution for MSME’s</span>
+                </div>
+                <form nz-form [formGroup]="validateForm" (ngSubmit)="onSubmit()">
+                    <div class="ant-row align-end mt-50 d-block">
+                        <div class="input-fields" nz-col nzMd="9">                                                           
+                            <nz-form-item>
+                                <nz-form-label nzRequired nzFor="email" class="f-12 fw-400 dark-grey">Email Address</nz-form-label>
+                                <nz-form-control nzErrorTip="Enter valid Email">
+                                    <input nz-input formControlName="email" id="email" placeholder="Email Address" />
+                                </nz-form-control>
+                            </nz-form-item>                                
+                        </div>
+                        <div nz-col nzMd="1">
+                        </div>
+                        <nz-form-item class="button-styles" nz-col nzMd="4">
+                            <nz-form-control>
+                                <button nz-button [nzSize]="size" nzType="primary" class="f-12 fw-600" type="submit">Register</button>
+                            </nz-form-control>
+                        </nz-form-item>
+                    </div>
+                </form>
+                <div class="f-14 fw-400 dark-grey mt-30" style="margin-bottom: 110px;">
+                    Already have an account ? <span class="f-16 fw-500 cursor-pointer orange-text">Login</span>
+                </div>
+            </div>
+            <div class="add-pos">
+                <div class="w150 text-center">
+                   <img src="../../../../assets/images/bottom_logo.svg" />
+                   <img src="../../../../assets/images/icons/lfl.svg" />
+                </div>
+           </div>
+        </div>  
+        <div nz-col nzXs="24" nzSm="24" nzMd="24" class="profile">
+            <div class="profile-description">
+                <p class="fw-400 f-16 blue-text">Simblify has streamlined our operation to such an extend, that we have stopped looking into it and are focusing entirely on our core business.</p>
+                <p class="fw-700 f-18 blue-text mt-30">Vinay Parab</p>
+                <p class="lblue-text f-16 fw-400">Lepolabs</p>
+            </div>
+        </div>              
     </div>
 </div>

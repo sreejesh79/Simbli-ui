@@ -9,7 +9,7 @@
     .container {
         margin: auto;
         width: 80%;
-        height: 85%;
+        height: 100%;
         position: relative;
         .steps-content {
             margin-top: 16px;
@@ -33,9 +33,37 @@
         background-color: var(--white);
         padding: 12px;
         margin: auto;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
         .bottom-inner {
             width: 85%;
             margin: auto;
+        }
+    }
+}
+.active-position {
+    img {
+        position: fixed;
+        bottom: -10px;
+        width: 110px !important;
+        z-index: 1;
+    }
+}
+@media screen and (max-width: 768px) {
+    .dashboard {
+        .container {
+            width: 90% !important;
+        }
+    }
+    .steps-content {
+        padding-top: 50px !important;
+        overflow: auto;
+        height: 80%;
+    }
+    .active-position {
+        img {
+            width: 95px !important;
         }
     }
 }

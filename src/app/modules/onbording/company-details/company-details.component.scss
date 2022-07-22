@@ -18,3 +18,21 @@
         }
     }
 }
+@media screen and (max-width: 768px) {
+    .company-details {
+        .pan {
+            display: block !important;
+            .ant-col-xs-12 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        .fetch-wrapper {
+            .ant-col-xs-10 {
+                display: block;
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}

@@ -8,3 +8,23 @@
         }
     }
 }
+@media screen and (max-width: 768px) {
+    .personal-details {
+        .mobileStyle {
+            display: block !important;
+            .ant-col-sm-10 {
+                max-width: 75% !important;
+            }
+        }
+        .select-options {
+            .ant-col-sm-10 {
+                flex: 0 0 75% !important;
+                max-width: 75% !important;
+            }
+        }   
+        .f-24 {
+            font-size: 21px !important;
+        }     
+    }
+    
+}
