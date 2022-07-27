@@ -31,6 +31,10 @@
             position: relative;
             .logo {
                 margin: 15px 20px;
+                width: 320px;
+                img {
+                    width: 100%;
+                }
             }
             .details-text {
                 line-height: 28.44px;
