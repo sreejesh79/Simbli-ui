@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   { 
     path: "**", 
-    redirectTo: "onbording/login" 
+    redirectTo: "onbording" 
   },
 ];
 

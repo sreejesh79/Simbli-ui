@@ -7,14 +7,14 @@ import { OnbordingComponent } from './onbording.component';
 const routes: Routes = [
   { 
     path: '', 
-    component: OnbordingComponent 
+    component: LoginComponent 
   }, 
   {
     path: 'login', 
     component: LoginComponent 
   },
   {
-    path: 'dashboard', 
+    path: 'register', 
     component: DashboardComponent 
   }    
 ];

@@ -44,7 +44,7 @@ export class OtpPopupComponent implements OnInit {
 
   goDashboard() {
     this.modal.destroy();
-    this.router.navigateByUrl("onbording/dashboard");
+    this.router.navigateByUrl("onbording/register");
   }
 
 }
