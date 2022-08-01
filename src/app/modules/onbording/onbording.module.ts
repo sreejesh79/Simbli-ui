@@ -18,6 +18,12 @@ import { OfficeDetailsComponent } from './office-details/office-details.componen
 import { SucessPopupComponent } from './sucess-popup/sucess-popup.component';
 import { NoDataPopupComponent } from './no-data-popup/no-data-popup.component';
 import { NzFormModule } from 'ng-zorro-antd/form';
+import { AuthFacadeService } from 'src/app/modules/onbording/state/auth/auth.facade.service';
+import { AuthService } from 'src/app/modules/onbording/services/auth.service';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
+import { authReducer } from 'src/app/modules/onbording/state/auth/auth.reducers';
+import { AuthEffect } from 'src/app/modules/onbording/state/auth/auth.effects';
 
 @NgModule({
   declarations: [
@@ -40,7 +46,10 @@ import { NzFormModule } from 'ng-zorro-antd/form';
     NgOtpInputModule,
     NzFormModule,
     FormsModule,
-    ReactiveFormsModule, 
-  ]
+    ReactiveFormsModule,
+    StoreModule.forFeature('AUTH', authReducer),
+    EffectsModule.forFeature([AuthEffect]), 
+  ],
+  providers: [AuthFacadeService, AuthService]
 })
 export class OnbordingModule { }
