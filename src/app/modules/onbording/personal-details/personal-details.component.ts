@@ -1,6 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NzButtonSize } from 'ng-zorro-antd/button';
+import { NzModalService } from 'ng-zorro-antd/modal';
+import { EmailPopupComponent } from '../email-popup/email-popup.component';
 
 
 @Component({
@@ -19,7 +21,7 @@ export class PersonalDetailsComponent implements OnInit {
   isNotSelected(value: string): boolean {
     return this.listOfSelectedValue.indexOf(value) === -1;
   }
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private modalService: NzModalService) { }
 
   ngOnInit(): void {
     this.validateForm = this.fb.group({
@@ -34,7 +36,16 @@ export class PersonalDetailsComponent implements OnInit {
   onSubmit(): void {
     if (this.validateForm.valid) {
       console.log('submit', this.validateForm.value);
-      this.submitdata.emit(true);
+      const modal = this.modalService.create({
+        nzContent: EmailPopupComponent,
+        nzMaskClosable: false,
+        nzClosable: false,
+      });
+
+      setTimeout(() => modal.destroy(), 1500);
+      setTimeout(()=>{         
+         this.submitdata.emit(true);
+      }, 2000);      
     } else {
       Object.values(this.validateForm.controls).forEach((control) => {
         if (control.invalid) {
@@ -43,5 +54,13 @@ export class PersonalDetailsComponent implements OnInit {
         }
       });
     }
+  }
+
+  showModal() {    
+    this.modalService.create({
+      nzContent: EmailPopupComponent,
+      nzMaskClosable: false,
+      nzClosable: false,
+    });
   }
 }

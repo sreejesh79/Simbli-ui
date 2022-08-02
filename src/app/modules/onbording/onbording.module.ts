@@ -24,6 +24,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { authReducer } from 'src/app/modules/onbording/state/auth/auth.reducers';
 import { AuthEffect } from 'src/app/modules/onbording/state/auth/auth.effects';
+import { EmailPopupComponent } from './email-popup/email-popup.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AuthEffect } from 'src/app/modules/onbording/state/auth/auth.effects';
     OfficeDetailsComponent,
     SucessPopupComponent,
     NoDataPopupComponent,
+    EmailPopupComponent,
   
   ],
   imports: [
